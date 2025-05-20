@@ -1,4 +1,5 @@
 import 'package:belajar_dart_flutter/meet2/meet_2.dart';
+import 'package:belajar_dart_flutter/meet2/tugas2.dart';
 import 'package:flutter/material.dart';
 import 'tugas1.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 224, 221, 216)),
       ),
-      home: MeetDua(),
+      home: TugasDua(),
     );
   }
 }
