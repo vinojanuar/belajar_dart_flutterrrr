@@ -1,7 +1,5 @@
-import 'package:belajar_dart_flutter/meet2/meet_2.dart';
-import 'package:belajar_dart_flutter/meet2/tugas2.dart';
+import 'package:belajar_dart_flutter/meet_4/Tugas_4.dart';
 import 'package:flutter/material.dart';
-import 'tugas1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PPKD B 2',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 224, 221, 216)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 224, 221, 216),
+        ),
       ),
-      home: TugasDua(),
+      home: Tugas4(),
     );
   }
 }
