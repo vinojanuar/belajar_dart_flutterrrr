@@ -8,14 +8,20 @@ class Tugas3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 151, 218, 192),
-        title: Text("Tugas3"),
+        title: Text(
+          "Tugas3",
+          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Text("Masukan Data Anda"),
+              Text(
+                "Masukan Data Anda",
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+              ),
               SizedBox(height: 20),
 
               //Masukan Nama Anda
@@ -26,7 +32,7 @@ class Tugas3 extends StatelessWidget {
                   hintStyle: TextStyle(fontSize: 12),
                   filled: true,
                   fillColor: Color(0xffB2CD9C),
-                  suffixIcon: Icon(Icons.visibility),
+
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide(color: Color(0xffCA7842), width: 1),
@@ -47,7 +53,7 @@ class Tugas3 extends StatelessWidget {
                   hintStyle: TextStyle(fontSize: 12),
                   filled: true,
                   fillColor: Color(0xffB2CD9C),
-                  suffixIcon: Icon(Icons.visibility),
+
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide(color: Color(0xffCA7842), width: 1),
@@ -68,7 +74,7 @@ class Tugas3 extends StatelessWidget {
                   hintStyle: TextStyle(fontSize: 12),
                   filled: true,
                   fillColor: Color(0xffB2CD9C),
-                  suffixIcon: Icon(Icons.visibility),
+
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide(color: Color(0xffCA7842), width: 1),
@@ -81,7 +87,10 @@ class Tugas3 extends StatelessWidget {
               ),
 
               SizedBox(height: 10),
-              Text("Deskripsi"),
+              Text(
+                "Deskripsi",
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+              ),
 
               SizedBox(height: 20),
               TextField(
@@ -89,8 +98,9 @@ class Tugas3 extends StatelessWidget {
                   hintText: "Masukan Kata-kata",
                   hintStyle: TextStyle(fontSize: 12),
                   filled: true,
+                  prefixIcon: Icon(Icons.description),
                   fillColor: Color(0xffB2CD9C),
-                  suffixIcon: Icon(Icons.visibility),
+
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide(color: Color(0xffCA7842), width: 1),
@@ -103,7 +113,10 @@ class Tugas3 extends StatelessWidget {
               ),
 
               SizedBox(height: 20),
-              Text("GALERI KITA"),
+              Text(
+                "GALERI KITA",
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+              ),
 
               GridView.count(
                 physics: NeverScrollableScrollPhysics(),
@@ -113,12 +126,33 @@ class Tugas3 extends StatelessWidget {
                 mainAxisSpacing: 10,
                 crossAxisCount: 2,
                 children: [
-                  Container(height: 100, color: Color(0xffB2CD9C)),
-                  Container(height: 100, color: Color(0xff4B352A)),
-                  Container(height: 100, color: Color(0xffCA7842)),
-                  Container(height: 100, color: Color(0xffF4E7E1)),
-                  Container(height: 100, color: Color(0xffFF9B45)),
-                  Container(height: 100, color: Color(0xffD5451B)),
+                  //gambar1
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset10.jpg"),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset9.jpg"),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset8.jpg"),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset7.jpg"),
+                  ),
+
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset5.jpg"),
+                  ),
+
+                  Card(
+                    elevation: 4,
+                    child: Image.asset("assets/images/Asset6.jpg"),
+                  ),
                 ],
               ),
             ],
