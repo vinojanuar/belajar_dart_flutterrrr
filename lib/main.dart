@@ -1,4 +1,4 @@
-import 'package:belajar_dart_flutter/meet5/Tugas5.dart';
+import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 224, 221, 216),
         ),
       ),
-      home: TugasLima(),
+      home: TugasEnam(),
     );
   }
 }
