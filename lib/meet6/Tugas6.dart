@@ -1,3 +1,4 @@
+import 'package:belajar_dart_flutter/meet1/tugas1.dart';
 import 'package:flutter/material.dart';
 
 class TugasEnam extends StatefulWidget {
@@ -112,7 +113,10 @@ class _TugasEnamState extends State<TugasEnam> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // aksi request OTP
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TugasSatu()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xff21BDCA),
@@ -179,7 +183,11 @@ class _TugasEnamState extends State<TugasEnam> {
                       const SizedBox(width: 10),
                       const Text(
                         "Google",
-                        style: TextStyle(fontSize: 14, color: Colors.black87),
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black87,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),
@@ -205,7 +213,11 @@ class _TugasEnamState extends State<TugasEnam> {
                       const SizedBox(width: 10),
                       const Text(
                         "Facebook",
-                        style: TextStyle(fontSize: 14, color: Colors.black87),
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black87,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),

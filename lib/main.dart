@@ -1,4 +1,4 @@
-import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
+import 'package:belajar_dart_flutter/meet7/tugas7.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,18 +8,20 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your aplication.
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'PPKD B 2',
+      title: 'Belajar Dart Flutter',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 224, 221, 216),
         ),
       ),
-      home: TugasEnam(),
+
+      home: const TugasTujuh(),
+      // kalo pake routes + initial routes ga bisa sambil pakehome lur
     );
   }
 }
