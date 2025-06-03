@@ -1,4 +1,4 @@
-import 'package:belajar_dart_flutter/meet14/produkmodel.dart';
+import 'package:belajar_dart_flutter/meet14/meet_A/produkmodel.dart';
 import 'package:flutter/material.dart';
 
 class ModelList extends StatefulWidget {

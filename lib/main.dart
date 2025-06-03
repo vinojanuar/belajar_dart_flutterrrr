@@ -1,4 +1,4 @@
-import 'package:belajar_dart_flutter/meet14/Tugas9.dart';
+import 'package:belajar_dart_flutter/meet14/meet_A/meet_B/Tugas10.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: const TugasSembilan(),
+      home: const PendaftaranPage(),
 
       // kalo pake routes + initial routes ga bisa sambil pakehome lur
     );
