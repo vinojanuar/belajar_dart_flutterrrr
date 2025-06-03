@@ -10,6 +10,7 @@ class TugasTujuh extends StatefulWidget {
 
   @override
   State<TugasTujuh> createState() => _TugasTujuhState();
+  static const String id = "/tugas7";
 }
 
 class _TugasTujuhState extends State<TugasTujuh> {

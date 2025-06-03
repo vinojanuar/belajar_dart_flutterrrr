@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class TugasEnam extends StatefulWidget {
   const TugasEnam({super.key});
+  static const String id = "/Tugas6";
 
   @override
   State<TugasEnam> createState() => _TugasEnamState();

@@ -1,4 +1,6 @@
-import 'package:belajar_dart_flutter/meet14/meet_A/meet_B/Tugas10.dart';
+import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
+import 'package:belajar_dart_flutter/meet7/tugas7.dart';
+import 'package:belajar_dart_flutter/utils/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: "/",
+      routes: {
+        "/": (context) => SplashScreen(),
+        "/login": (context) => TugasEnam(),
+        "/home_screen": (context) => TugasTujuh(),
+
+        TugasEnam.id: (context) => TugasEnam(),
+        TugasTujuh.id: (context) => TugasTujuh(),
+      },
       debugShowCheckedModeBanner: false,
       title: 'Belajar Dart Flutter',
       theme: ThemeData(
@@ -20,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: const PendaftaranPage(),
+      // home: const PendaftaranPage(),
 
       // kalo pake routes + initial routes ga bisa sambil pakehome lur
     );
