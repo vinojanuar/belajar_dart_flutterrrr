@@ -1,3 +1,0 @@
-class Siswa{
-  fina
-}
