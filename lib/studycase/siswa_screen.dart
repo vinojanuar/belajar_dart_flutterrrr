@@ -13,7 +13,7 @@ class _SiswaScreenState extends State<SiswaScreen> {
   final TextEditingController namaController = TextEditingController();
   final TextEditingController umurController = TextEditingController();
 
-  // final DBHelper dbHelper = DBHelper(); // ✅ Buat objek DBHelper
+  final DBHelper dbHelper = DBHelper(); // ✅ Buat objek DBHelper
   List<Siswa> daftarSiswa = [];
 
   @override
@@ -23,18 +23,18 @@ class _SiswaScreenState extends State<SiswaScreen> {
   }
 
   Future<void> muatData() async {
-    final data = await DBHelper().getAllSiswa(); // ✅ Panggil melalui objek
+    final data = await dbHelper.getAllSiswa(); // ✅ Panggil melalui objek
     setState(() {
       daftarSiswa = data;
     });
   }
 
   Future<void> simpanData() async {
-    final nama = namaController.text;
+    final nama = namaController.text.trim();
     final umur = int.tryParse(umurController.text.trim()) ?? 0;
 
     if (nama.isNotEmpty && umur > 0) {
-      await DBHelper().insertSiswa(
+      await dbHelper.insertSiswa(
         Siswa(nama: nama, umur: umur),
       ); // ✅ Panggil melalui objek
       namaController.clear();
@@ -53,23 +53,23 @@ class _SiswaScreenState extends State<SiswaScreen> {
           children: [
             TextField(
               controller: namaController,
-              decoration: InputDecoration(labelText: 'Nama'),
+              decoration: const InputDecoration(labelText: 'Nama'),
             ),
             TextField(
               controller: umurController,
-              decoration: InputDecoration(labelText: 'Umur'),
+              decoration: const InputDecoration(labelText: 'Umur'),
               keyboardType: TextInputType.number,
             ),
-            SizedBox(height: 10),
-            ElevatedButton(onPressed: simpanData, child: Text('Simpan')),
-            Divider(height: 20),
+            const SizedBox(height: 10),
+            ElevatedButton(onPressed: simpanData, child: const Text('Simpan')),
+            const Divider(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: daftarSiswa.length,
                 itemBuilder: (context, index) {
                   final siswa = daftarSiswa[index];
                   return ListTile(
-                    leading: CircleAvatar(child: Text('${siswa.id}')),
+                    leading: CircleAvatar(child: Text('${siswa.id ?? ''}')),
                     title: Text(siswa.nama),
                     subtitle: Text('Umur: ${siswa.umur}'),
                   );
