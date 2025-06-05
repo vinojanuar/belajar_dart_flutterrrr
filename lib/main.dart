@@ -1,8 +1,4 @@
-import 'package:belajar_dart_flutter/meet16/database/register_screen.dart';
-import 'package:belajar_dart_flutter/meet16/logins_creen.dart';
-import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
-import 'package:belajar_dart_flutter/meet7/tugas7.dart';
-import 'package:belajar_dart_flutter/utils/splash_screen.dart';
+import 'package:belajar_dart_flutter/studycase/siswa_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,24 +12,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/",
-      routes: {
-        "/": (context) => SplashScreen(),
-        "/login": (context) => Loginscreen(),
-        "/home_screen": (context) => TugasTujuh(),
-        Loginscreen.id: (context) => Loginscreen(),
-        RegisterScreenApp.id: (context) => RegisterScreenApp(),
+      title: 'Siswa App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const SiswaScreen(),
+      // initialRoute: "/",
+      // routes: {
+      //   "/": (context) => SplashScreen(),
+      //   "/login": (context) => Loginscreen(),
+      //   "/home_screen": (context) => TugasTujuh(),
+      //   Loginscreen.id: (context) => Loginscreen(),
+      //   RegisterScreenApp.id: (context) => RegisterScreenApp(),
 
-        TugasEnam.id: (context) => TugasEnam(),
-        TugasTujuh.id: (context) => TugasTujuh(),
-      },
-      debugShowCheckedModeBanner: false,
-      title: 'Belajar Dart Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 224, 221, 216),
-        ),
-      ),
+      //   TugasEnam.id: (context) => TugasEnam(),
+      //   TugasTujuh.id: (context) => TugasTujuh(),
+      // },
+      // debugShowCheckedModeBanner: false,
+      // title: 'Belajar Dart Flutter',
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(
+      //     seedColor: const Color.fromARGB(255, 224, 221, 216),
+      //   ),
+      // ),
 
       // home: const PendaftaranPage(),
 

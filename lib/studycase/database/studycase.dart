@@ -8,10 +8,13 @@ class DBHelper {
     return openDatabase(
       join(dbPath, 'siswa.db'),
       onCreate: (db, version) {
+        print('Creating siswa table...');
         return db.execute(
           'CREATE TABLE siswa (id INTEGER PRIMARY KEY AUTOINCREMENT, nama TEXT, umur INTEGER)',
         );
       },
+      onUpgrade: (db, oldVersion, newVersion) {},
+      version: 1,
     );
   }
 
@@ -23,12 +26,12 @@ class DBHelper {
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
   }
-}
 
-//membuat fungsi get
-Future<List<Siswa>> getAllSiswa() async {
-  final db = await DBHelper.db();
-  final List<Map<String, dynamic>> maps = await db.query('siswa');
+  //membuat fungsi get
+  Future<List<Siswa>> getAllSiswa() async {
+    final db = await DBHelper.db();
+    final List<Map<String, dynamic>> maps = await db.query('siswa');
 
-  return List.generate(maps.length, (i) => Siswa.fromMap(maps[i]));
+    return List.generate(maps.length, (i) => Siswa.fromMap(maps[i]));
+  }
 }
