@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class Siswa {
   final int? id;
@@ -13,15 +11,11 @@ class Siswa {
   }
 
   factory Siswa.fromMap(Map<String, dynamic> map) {
-    return Siswa(
-      id: map['id'] != null ? map['id'] as int : null,
-      nama: map['nama'] as String,
-      umur: map['umur'] as int,
-    );
+    return Siswa(id: map['id'], nama: map['nama'], umur: map['umur']);
   }
 
-  String toJson() => json.encode(toMap());
+  // String toJson() => json.encode(toMap());
 
-  factory Siswa.fromJson(String source) =>
-      Siswa.fromMap(json.decode(source) as Map<String, dynamic>);
+  // factory Siswa.fromJson(String source) =>
+  //     Siswa.fromMap(json.decode(source) as Map<String, dynamic>);
 }

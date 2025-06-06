@@ -8,10 +8,13 @@ class DBHelper {
     return openDatabase(
       join(dbPath, 'siswa.db'),
       onCreate: (db, version) {
+        print('Creating siswa table...');
         return db.execute(
           'CREATE TABLE siswa (id INTEGER PRIMARY KEY AUTOINCREMENT, nama TEXT, umur INTEGER)',
         );
       },
+      onUpgrade: (db, oldVersion, newVersion) {},
+      version: 1,
     );
   }
 
