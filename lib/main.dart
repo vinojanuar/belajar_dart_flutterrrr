@@ -2,6 +2,7 @@ import 'package:belajar_dart_flutter/meet14/meetC/drawer.dart';
 import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
 import 'package:belajar_dart_flutter/meet7/tugas7.dart';
 import 'package:belajar_dart_flutter/studycase/siswa_screen.dart';
+import 'package:belajar_dart_flutter/tugas11/kost_screen.dart';
 import 'package:belajar_dart_flutter/utils/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Siswa App',
+      title: 'Anak Kost',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SiswaScreen(),
+      home: const Anakkost(),
       // initialRoute: "/",
       // routes: {
       //   "/": (context) => SplashScreen(),
