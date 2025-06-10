@@ -29,7 +29,22 @@ class Dbkost {
   static Future<List<Kost>> getAllKost() async {
     final db = await Dbkost.db();
     final List<Map<String, dynamic>> maps = await db.query('anakkost');
-
+    print(maps);
     return List.generate(maps.length, (i) => Kost.fromMap(maps[i]));
+  }
+
+  Future<void> updateKost(Kost anakkost) async {
+    final db = await Dbkost.db();
+    await db.update(
+      'anakkost',
+      anakkost.toMap(),
+      where: 'id = ?',
+      whereArgs: [anakkost.id],
+    );
+  }
+
+  Future<void> deleteKost(int id) async {
+    final db = await Dbkost.db();
+    await db.delete('anakkost', where: 'id = ?', whereArgs: [id]);
   }
 }

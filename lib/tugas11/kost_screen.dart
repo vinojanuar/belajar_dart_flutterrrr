@@ -1,4 +1,5 @@
 import 'package:belajar_dart_flutter/tugas11/database/dbcase.dart';
+import 'package:belajar_dart_flutter/tugas11/edit_screen.dart';
 import 'package:belajar_dart_flutter/tugas11/model/model_kost.dart';
 import 'package:flutter/material.dart';
 
@@ -153,6 +154,38 @@ class _AnakkostState extends State<Anakkost> {
                           Text("🎂 Umur: ${anak.umur} tahun"),
                         ],
                       ),
+                    ),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        //Untuk Tombol Edit Cuyyy
+                        IconButton(
+                          icon: const Icon(Icons.edit, color: Colors.blue),
+                          onPressed: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => EditScreen(kost: anak),
+                              ),
+                            );
+
+                            muatData();
+                          },
+                        ),
+
+                        IconButton(
+                          icon: const Icon(Icons.delete, color: Colors.red),
+                          onPressed: () async {
+                            await Dbkost().deleteKost(anak.id!);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text("Data Berhasil di Hapus"),
+                              ),
+                            );
+                            muatData();
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 );
