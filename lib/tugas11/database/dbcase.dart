@@ -5,20 +5,26 @@ import 'package:sqflite/sqflite.dart';
 class Dbkost {
   static Future<Database> db() async {
     final dbPath = await getDatabasesPath();
+    final path = join(dbPath, 'kost.db');
+    print("DB path: $path");
+
     return openDatabase(
-      join(dbPath, 'kost.db'),
-      onCreate: (db, version) {
-        return db.execute(
+      path,
+
+      onCreate: (db, version) async {
+        print("Creating database...");
+        await db.execute(
           'CREATE TABLE anakkost (id INTEGER PRIMARY KEY AUTOINCREMENT, nama TEXT, nomorhandphone INTEGER, nomorkamar INTEGER, umur INTEGER)',
         );
       },
-      onUpgrade: (db, oldVersion, newVersion) {},
+
       version: 1,
     );
   }
 
   Future<void> insertSiswa(Kost anakkost) async {
     final db = await Dbkost.db();
+    print("Menyimpan: ${anakkost.toMap()}");
     await db.insert(
       'anakkost',
       anakkost.toMap(),

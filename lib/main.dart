@@ -1,8 +1,5 @@
-import 'package:belajar_dart_flutter/meet14/meetC/drawer.dart';
-import 'package:belajar_dart_flutter/meet6/Tugas6.dart';
 import 'package:belajar_dart_flutter/meet7/tugas7.dart';
-import 'package:belajar_dart_flutter/studycase/siswa_screen.dart';
-import 'package:belajar_dart_flutter/utils/splash_screen.dart';
+import 'package:belajar_dart_flutter/tugas11/kost_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Anak Kost',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SiswaScreen(),
+      home: const TugasTujuh(),
       // initialRoute: "/",
       // routes: {
       //   "/": (context) => SplashScreen(),
