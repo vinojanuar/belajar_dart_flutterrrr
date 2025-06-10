@@ -35,7 +35,7 @@ class Dbkost {
   static Future<List<Kost>> getAllKost() async {
     final db = await Dbkost.db();
     final List<Map<String, dynamic>> maps = await db.query('anakkost');
-
+    print(maps);
     return List.generate(maps.length, (i) => Kost.fromMap(maps[i]));
   }
 
