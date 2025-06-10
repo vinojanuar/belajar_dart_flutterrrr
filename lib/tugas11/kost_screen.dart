@@ -156,7 +156,10 @@ class _AnakkostState extends State<Anakkost> {
                       ),
                     ),
                     trailing: Row(
+<<<<<<< HEAD
                       mainAxisSize: MainAxisSize.min,
+=======
+>>>>>>> a7c1c2b33f22352b9a699e40a4c2d665a09673b2
                       children: [
                         //Untuk Tombol Edit Cuyyy
                         IconButton(
